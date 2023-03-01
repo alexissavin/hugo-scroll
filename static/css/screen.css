@@ -157,7 +157,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
 }
 
 h4 {
@@ -190,15 +190,15 @@ a.btn {
   -webkit-border-radius: 6px;
   color: white;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 1px;
   margin: 0;
   overflow: visible;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 10px 5px 10px;
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
   cursor: pointer;
-  font-family: "Oswald", sans-serif;
+  /*font-family: "Oswald", sans-serif;*/
   text-transform: uppercase;
   font-weight: lighter;
 }
@@ -248,12 +248,28 @@ ol ul {
 }
 
 hr {
+  /*
   display: block;
   height: 1px;
+  */
+  font-family: Arial, sans-serif; /* choose the font you like */
+  text-align: center; /* horizontal centering */
+  line-height: 1px; /* vertical centering */
+  height: 1px; /* gap between the lines */
+  width: 80%;
+  font-size: 1em; /* choose font size you like */
   border: 0;
   border-top: 1px solid #efefef;
-  margin: 3.2em 0;
+  margin: 1.8rem auto;
   padding: 0;
+  overflow: visible;
+}
+
+hr:after {
+  /*content: "\1F33F"; /* section sign */*/
+  color: #000000;
+  display: inline; /* for vertical centering and background knockout */
+  padding: 0 0.5em; /* size of background color knockout */
 }
 
 blockquote {
@@ -450,7 +466,7 @@ ul li {
 .inner {
   position: relative;
   width: 80%;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -473,7 +489,8 @@ ul li {
   margin-bottom: 0rem;
   text-align: center;
   color: #fff;
-  background: #b80135 no-repeat center center;
+  /*background: #b80135 no-repeat center center;*/
+  background: #ffffff no-repeat center center;
   background-size: cover;
 }
 
@@ -521,7 +538,7 @@ ul li {
   position: relative;
 }
 .post-holder.odd {
-  background: #b80135;
+  /*background: #b80135;*/
   color: white;
 }
 
@@ -529,7 +546,7 @@ ul li {
 .post {
   position: relative;
   width: 80%;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0rem auto;
   padding-bottom: 4rem;
   padding-top: 4rem;
@@ -758,7 +775,7 @@ a.fn-item.active {
 .pagination {
   position: relative;
   width: 80%;
-  max-width: 700px;
+  max-width: 800px;
   margin: 4rem auto;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
@@ -976,20 +993,20 @@ a.fn-item.active {
   }
 
   h1 {
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     text-indent: -2px;
   }
 
   h2 {
-    font-size: 3.8rem;
+    font-size: 2.8rem;
   }
 
   h3 {
-    font-size: 3.3rem;
+    font-size: 2.3rem;
   }
 
   h4 {
-    font-size: 2.8rem;
+    font-size: 2.0rem;
   }
 }
 
@@ -1031,7 +1048,7 @@ a.fn-item.active {
     display: none;
   }
   a.btn {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .blog-title {

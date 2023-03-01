@@ -29,7 +29,10 @@ var $sitehead = $("#site-head");
   }
   $(document).ready(function () {
     $postholder.each(function (e) {
-      if (e % 2 != 0) $(this).addClass("odd");
+      if (e % 2 != 0) {
+        $(this).addClass("odd");
+        $(this).find(".post-picture").css('float','right');;
+      };
     });
 
     $postafter.each(function (e) {
