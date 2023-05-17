@@ -13,6 +13,9 @@
                     <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ .Title }}</a>
                 {{ end }}
             </div>
+            <div class="inner">
+                <a id='header-arrow' href="#{{- anchorize .Title -}}" aria-label="Go to first section"><i class="fa fa-angle-down"></i></a>
+            </div>
         </div>
     </div>
 </header>
@@ -23,16 +26,25 @@
     {{ range $index_val, $elem_val := $sections }}
         <div class='post-holder'>
             <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $sections) }}last{{ end }}'>
-                <header class="post-header">
-                    <h1 class="post-title">{{ .Title }}</h1>
-                </header>
-                <section class="post-content">
-                    <div class="post-picture" style="float:left;width:40%;margin:1em 1em 0 1em;{{ if not .Params.picture }}display:none;{{ end }}">
-                        <img src="{{ .Params.picture }}" {{ if .Params.picturealt }} alt="{{ .Params.picturealt }}" {{ end }}>
+                <header class="post-header" style="display:flex;">
+                    <div style="vertical-align:middle;width:100%;height:100%;display:flex;">
+                        <div style="display:flex;vertical-align:middle;align-items:center;{{ if .Params.picture }}width:70%;{{ end }}">
+                            <h1 class="post-title">{{ .Title }}</h1>
+                        </div>
+                        <div class="post-picture" style="display:flex;{{ if not .Params.picture }}display:none;{{else}}width:20%;{{ end }}">
+                            <img class="post-img" src="{{ .Params.picture }}" {{ if .Params.picturealt }} alt="{{ .Params.picturealt }}" {{ end }}>
+                        </div>
                     </div>
-                    <div style="width:100%;margin: 1em 0;text-align: justify;">
+                </header>
+                <section class="post-content" style="display:flex;">
+                    <div style="width:100%;float:left;margin:0;text-align: justify;">
                         {{ .Content }}
                     </div>
+                    <!--
+                    <div class="post-picture" style="float:right;width:20%;margin:1em 1em;{{ if not .Params.picture }}display:none;{{ end }}">
+                        <img class="post-img" src="{{ .Params.picture }}" {{ if .Params.picturealt }} alt="{{ .Params.picturealt }}" {{ end }}>
+                    </div>
+                    -->
                 </section>
             </article>
             <div class='post-after'></div>
